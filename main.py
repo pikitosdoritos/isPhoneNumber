@@ -18,3 +18,11 @@ def isPhoneNumber(text):
 
 print('\n415-555-4242 - is Phone number: ', isPhoneNumber('415-555-4242'))
 print('\nMoshi moshi - is Phone number: ', isPhoneNumber('Moshi moshi'))
+
+message = 'Подзвони мені завтра за номером 415-555-4292, 415-555-4292 - це телефоний номер мого офісу.'
+
+for i in range(len(message)):
+    chunk = message[i: i+12]
+    if isPhoneNumber(chunk):
+        print("Знайдений номер телефону: " + chunk)
+print('Готово')
